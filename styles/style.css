@@ -1,0 +1,32 @@
+.tabela__container {
+    margin: 10px 51% 10px 10px;
+    max-height: 70vh; 
+    overflow-y: auto;
+}
+
+
+.body {
+    grid-template-columns: 50% 50%;
+    align-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo {
+    align-items: center;
+    text-align: center;
+}
+
+table, th, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+#map {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 50%;
+    height: 65vh;
+}
