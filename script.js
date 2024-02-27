@@ -634,9 +634,9 @@ function table() {
 
 table();
 
+let map;
 async function initMap() {
-    const { Map } = await google.maps.importLibrary("maps");
-    let map;
+    const { Map } = await google.maps;
 
     map = new Map(document.getElementById("map"), {
             center: { lat: -18.1533, lng: -50.8080 },
@@ -667,10 +667,8 @@ tableRows.forEach(row => {
         console.log(row.querySelector("td:nth-child(6)").textContent);
         if(row.querySelector("td:nth-child(6)").textContent !== null){
             let coordinate = row.querySelector("td:nth-child(6)").textContent.split(",");
-            let lat = -34.397;
-            let lng = 150.644;
-            map.setCenter({ lat, lng });
-            console.log("teste");
+            map.setCenter({ lat: parseFloat(coordinate[0]), lng: parseFloat(coordinate[1]) });
+            map.setZoom(18);
         }
     });
 });
